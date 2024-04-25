@@ -4,9 +4,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import { userRoute } from './routes/userRoute.js';
 import { residencyRoute } from './routes/residencyRoute.js';
-import { resolve } from 'path';
-import { rejects } from 'assert';
-import { spawn } from 'child_process';
+
 
 
 dotenv.config()
