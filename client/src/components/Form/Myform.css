@@ -1,0 +1,60 @@
+.my-form {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+  }
+  
+  .my-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .my-form input[type='text'],
+  .my-form input[type='number'] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .my-form input[type='checkbox'] {
+    margin-top: 5px;
+    margin-bottom: 50px;
+  }
+  
+  .my-form button {
+    background-color: #758de2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .my-form button:hover {
+    background-color: #5d77d6;
+  }
+
+  .search-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    margin-right: 10px;
+  }
+  
+  label {
+    margin-right: 5px;
+  }
+  span {
+    text-align: center; /* Makes the span a block-level element to apply horizontal centering */
+  }
+  

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Price Prediction</title>
+</head>
+<body>
+    <h1>Predict Property Price</h1>
+    <form method="POST" action="/predict">
+        <label for="lieu">Location:</label>  <select id="lieu" name="lieu">
+            {% for lieu in lieux %}
+            <option value="{{ lieu }}">{{ lieu }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="type">Property Type:</label>
+        <select id="type" name="type">
+            {% for type in types %}
+            <option value="{{ type }}">{{ type }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="concierge">Concierge (Yes/No):</label>
+        <input type="radio" id="concierge_yes" name="concierge" value="1">
+        <label for="concierge_yes">Yes</label>
+        <input type="radio" id="concierge_no" name="concierge" value="0" checked>
+        <label for="concierge_no">No</label>
+        <br>
+        <label for="security_system">Security System (Yes/No):</label>
+        <input type="radio" id="security_system_yes" name="security_system" value="1">
+        <label for="security_system_yes">Yes</label>
+        <input type="radio" id="security_system_no" name="security_system" value="0" checked>
+        <label for="security_system_no">No</label>
+        <br>
+        <label for="garden">Garden (Yes/No):</label>
+        <input type="radio" id="garden_yes" name="garden" value="1">
+        <label for="garden_yes">Yes</label>
+        <input type="radio" id="garden_no" name="garden" value="0" checked>
+        <label for="garden_no">No</label>
+        <br>
+        <label for="pool">Pool (Yes/No):</label>
+        <input type="radio" id="pool_yes" name="pool" value="1">
+        <label for="pool_yes">Yes</label>
+        <input type="radio" id="pool_no" name="pool" value="0" checked>
+        <label for="pool_no">No</label>
+        <br>
+        <label for="heating">Heating (Yes/No):</label>
+        <input type="radio" id="heating_yes" name="heating" value="1">
+        <label for="heating_yes">Yes</label>
+        <input type="radio" id="heating_no" name="heating" value="0" checked>
+        <label for="heating_no">No</label>
+        <br>
+        <label for="equipped_kitchen">Equipped Kitchen (Yes/No):</label>
+        <input type="radio" id="equipped_kitchen_yes" name="equipped_kitchen" value="1">
+        <label for="equipped_kitchen_yes">Yes</label>
+        <input type="radio" id="equipped_kitchen_no" name="equipped_kitchen" value="0" checked>
+        <label for="equipped_kitchen_no">No</label>
+        <br>
+        <label for="num_bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="num_bedrooms" name="num_bedrooms" min="0" required>
+        <br>
+        <label for="surface">Surface Area (m²):</label>
+        <input type="number" id="surface" name="surface" min="0" required>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <p>Predicted price: {{ prediction }}</p>
+    {% else %}
+    <p>Enter your property details and click "Predict" to get an estimated price.</p>
+    {% endif %}
+</body>
+</html>

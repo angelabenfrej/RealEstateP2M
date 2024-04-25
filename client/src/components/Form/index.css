@@ -1,0 +1,65 @@
+/* Create new blog form */
+.create {
+  max-width: 1200px; /* Increased max-width for wider form */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.494);
+  background-color: #00000000; /* Lighter background color */
+}
+
+.create label {
+  margin-bottom: 8px;/* Display labels inline */
+  width: 100px; /* Fixed width for labels to align them properly */
+  display: inline-block; /* Make labels behave like inline-block */
+  vertical-align: middle
+}
+
+.create h2 {
+  font-size: 24px;
+  color: #4c6baf;
+  margin-bottom: 20px;
+}
+
+/* Container for inline inputs */
+.input-row {
+  display:inline-flex;
+  justify-content:center;
+  align-items: center; 
+  width: calc(50% - 20px); 
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: calc(20% - 70px); /* Calculate width for input fields */
+  padding: 5px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.create button {
+  background-color: #4c6baf;
+  color: #ffffff;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.create button:hover {
+  background-color: #33508f;
+}
+
+
+
+.error {
+  color: #ff0000;
+  font-weight: bold;
+  margin-top: 10px;
+}

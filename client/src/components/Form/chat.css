@@ -1,0 +1,257 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2e2e2e00;
+    padding: 10px;
+    color: azure;
+    border-color: #4c6baf;
+  }
+
+  .containerland{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2e2e2e00;
+    padding: 10px;
+    color: azure;
+    border-color: #4c6baf;
+
+  }
+  .chat-formland input {
+    width: 100px;
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+  }
+  .chat-formland button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c6baf;
+    color: white;
+    cursor: pointer;
+
+  }
+  .containerroom {
+   width: 400px;
+  }
+  .chat-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .chat-form {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .chat-form input {
+    width: 1000px;
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .chat-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c6baf;
+    color: white;
+    cursor: pointer;
+  }
+
+  .continuebutton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c6baf;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: 200px;
+
+    
+  }
+
+  .property-type-selector {
+    max-width: 60px;
+    margin: auto;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+}
+
+.option {
+  flex: 1;
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  color: #f0f0f0;
+}
+
+.optionbedroom {
+    flex: 1;
+    background-color: black;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    color: #f0f0f0;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.optionbedroom button{
+  background-color: #f0f0f0;
+    padding: 4px 4px;
+    font-size: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 0.5px solid;
+    width: fit-content;
+    margin: 0 20px;
+}
+
+.optionfeature {
+  flex: 1;
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  color: #f0f0f0;
+}
+
+
+.option img {
+    display: block;
+    margin: 0,06;
+}
+
+.selected {
+    background-color: #8c5a20b3; /* or any other styling for selected state */
+}
+.property-type-selector {
+  max-width: 600px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  color: #4c6baf; /* Set your desired text color */
+  margin-right: 5px;
+}
+
+.property-selector {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.option button {
+    background-color: #f0f0f0;
+    padding: 4px 4px;
+    font-size: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 0.5px solid;
+    width: fit-content;
+    margin: 0 20px;
+}
+
+.bedrooms-label {
+  margin-right: 30px;
+  margin-left: 30px;
+  width: 400px;
+}
+
+.bedrooms-controls {
+  display:flex;
+  align-items: center;
+  margin-left: 50px;
+  padding: 1px;
+  font-size: 1.2rem;
+  margin: 0 20px;
+  width: 400px;
+}
+.option button:hover {
+  border-color: #ccc;
+  margin: 0 5px;
+}
+
+.property-type-selector .feature-list {
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.property-type-selector .feature-list label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+.property-type-selector .feature-item {
+  display: flex;
+  align-items: center;
+  margin-right: 1px; /* Adjust spacing between features */
+}
+
+
+.property-type-selector .feature-list input[type="checkbox"] {
+  margin-right: 20px;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: #8c5a20b3;
+  transform-origin: bottom left;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+
+
+
+
+
