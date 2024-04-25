@@ -2,7 +2,7 @@
     "version":2,
     "builds":[
         {
-            "src":"/Model/fast.py",
+            "src":"fast.py",
             "use":"@vercel/python"
 
         }
@@ -10,7 +10,7 @@
     "routes":[
         {
             "src":"/(.*)",
-            "dest":"app/fast.py"
+            "dest":"fast.py"
         }
     ]
 
