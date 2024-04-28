@@ -1,6 +1,10 @@
 FROM node:20-alpine
 
+RUN yarn global add nodemon
+
 WORKDIR /server
+
+COPY package.json .
 
 COPY . .
 
