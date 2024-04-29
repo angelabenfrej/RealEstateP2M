@@ -1,6 +1,6 @@
 fastapi==0.110.2
 uvicorn==0.29.0
-python-multipart
+python
 scikit-learn
 pandas
 xgboost==2.0.3
