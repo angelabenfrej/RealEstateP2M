@@ -4,6 +4,7 @@ RUN apk update && \
     apk add --no-cache \
         build-base \
         gcc \
+        libmemcached-dev \
         python3-dev \
         musl-dev \
         libffi-dev \
@@ -12,12 +13,10 @@ RUN apk update && \
 
 WORKDIR /Model
 
-COPY  requirements.txt .
+COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
-
 EXPOSE 8000
 
-CMD ["uvicorn", "fast:app","--reload"]
+CMD ["uvicorn", "fast:app", "--reload","--host", "0.0.0.0", "--port", "8000"]
