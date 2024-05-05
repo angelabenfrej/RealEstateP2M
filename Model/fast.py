@@ -14,7 +14,7 @@ with open('xgboost_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Load the dataset upfront for fitting LabelEncoders
-df = pd.read_csv("moubawab.csv")
+df = pd.read_csv("Moubawab.csv")
 
 # Initialize LabelEncoders
 le_lieu = LabelEncoder()
@@ -123,5 +123,5 @@ async def predict_api(data: dict):
     return JSONResponse(content={'prediction': prediction})
 
 if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+     import uvicorn
+     uvicorn.run(app, host="127.0.0.1", port=8000)
