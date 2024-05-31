@@ -34,8 +34,8 @@ templates = Jinja2Templates(directory="templates")
 origins = [
     "http://localhost",
     "http://localhost:5173",
-    "http://127.0.0.1:8000",
-    "http://127.0.0.1:8000/predict-api"
+    "http://127.0.0.1:4200",
+    "http://127.0.0.1:4200/predict-api"
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -124,4 +124,4 @@ async def predict_api(data: dict):
 
 if __name__ == '__main__':
      import uvicorn
-     uvicorn.run(app, host="127.0.0.1", port=8000)
+     uvicorn.run(app, port=4200)

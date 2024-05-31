@@ -4,11 +4,17 @@ services:
     build: ./server
     container_name: server_c
     ports:
-      - '4000:8000'
+      - '8000:8000'
   client:
     build: ./client
     container_name: client_c
     ports:
-      - '5173:3000'
+      - '5173:5173'
     stdin_open: true
     tty: true
+  model:
+    build: ./Model
+    command: sh -c "uvicorn fast:app --reload --host 0.0.0.0 --port 4200"
+    container_name: model_c
+    ports:
+      - '4200:4200'

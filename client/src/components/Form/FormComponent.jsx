@@ -28,7 +28,7 @@ const FormComponent = () => {
     setIsPending(true);
     setError(null);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict-api/', formData);
+      const response = await axios.post('http://127.0.0.1:4200/predict-api/', formData);
       setPredictionResult(response.data);
       console.log(response.data)
     } catch (error) {
@@ -52,6 +52,9 @@ const FormComponent = () => {
           <option value="Ben arous">Ben Arous</option>
           <option value="Monastir">Monastir</option>
         </select>
+
+        {formData.lieu && (
+          <>
 
         <label>Property Type</label>
         <select
@@ -146,6 +149,8 @@ const FormComponent = () => {
           required
         />
 
+</>
+        )}
         {!isPending && <button type='submit'>Give me the Price</button>}
         {isPending && <button disabled type='submit'>Prediction...</button>}
         {predictionResult && (

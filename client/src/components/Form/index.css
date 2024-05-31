@@ -1,47 +1,52 @@
-/* Create new blog form */
+/* Form Container */
 .create {
-  max-width: 1200px; /* Increased max-width for wider form */
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.494);
-  background-color: #00000000; /* Lighter background color */
-}
-
-.create label {
-  margin-bottom: 8px;/* Display labels inline */
-  width: 100px; /* Fixed width for labels to align them properly */
-  display: inline-block; /* Make labels behave like inline-block */
-  vertical-align: middle
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .create h2 {
   font-size: 24px;
   color: #4c6baf;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Container for inline inputs */
-.input-row {
-  display:inline-flex;
-  justify-content:center;
-  align-items: center; 
-  width: calc(50% - 20px); 
+/* Form Labels */
+.create label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
+/* Form Inputs */
 .create input,
-.create textarea,
 .create select {
-  width: calc(20% - 70px); /* Calculate width for input fields */
-  padding: 5px;
+  width: 100%;
+  padding: 12px;
   margin-bottom: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #040404;
   border-radius: 4px;
   font-size: 16px;
   box-sizing: border-box;
 }
 
+/* Select Styling */
+.create select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 8px);
+  background-position-y: center;
+}
+
+/* Submit Button */
 .create button {
+  width: 100%;
   background-color: #4c6baf;
   color: #ffffff;
   border: 0;
@@ -56,10 +61,10 @@
   background-color: #33508f;
 }
 
-
-
+/* Error Message */
 .error {
   color: #ff0000;
   font-weight: bold;
   margin-top: 10px;
+  text-align: center;
 }
